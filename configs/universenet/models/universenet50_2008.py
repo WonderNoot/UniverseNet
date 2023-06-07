@@ -1,5 +1,6 @@
 # model settings
 pretrained_ckpt = 'https://github.com/shinya7y/weights/releases/download/v1.0.2/res2net50_v1b_26w_4s-3cf99910_mmdetv2-92ed3313.pth'  # noqa
+
 model = dict(
     type='GFL',
     backbone=dict(
@@ -37,7 +38,7 @@ model = dict(
     ],
     bbox_head=dict(
         type='GFLSEPCHead',
-        num_classes=80,
+        num_classes=6,
         in_channels=256,
         stacked_convs=0,
         feat_channels=256,
